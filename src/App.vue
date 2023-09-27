@@ -11,7 +11,7 @@
       >
         <div
           class="p-1 bg-green-200 text-green-900 rounded"
-          :ref="elementApi.ref"
+          :ref="elementApi.ref as any"
         >
           {{ elementMetadata }}
         </div>
@@ -27,7 +27,7 @@
       >
         <div
           v-for="(item, index) in listMetadata"
-          :ref="listApi.getRef(index)"
+          :ref="listApi.getRef(index) as any"
           :key="item"
           class="p-1 bg-green-200 text-green-900 rounded"
         >
@@ -50,7 +50,7 @@
         >
           <div
             v-for="(column, columnIndex) in row"
-            :ref="planeApi.getRef(rowIndex, columnIndex)"
+            :ref="planeApi.getRef(rowIndex, columnIndex) as any"
             :key="column"
             class="p-1 line-clamp-1 bg-green-200 text-green-900 rounded"
           >
